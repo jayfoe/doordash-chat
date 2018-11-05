@@ -1,0 +1,28 @@
+/* .App {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
+  grid-template-areas: 
+    "list room room room room room"
+    "list chat chat chat chat chat"
+    "list chat chat chat chat chat"
+    "list chat chat chat chat chat"
+    "list chat chat chat chat chat"
+    "list msg msg msg msg msg";
+}
+
+.rooms-list {
+  grid-area: list;
+  background-color: rgb(255, 25, 64);
+  color: #ffffff;
+  height: 100%;
+}
+
+.messages {
+  grid-area: msg;
+}
+
+.room-info {
+  grid-area: room;
+} */
