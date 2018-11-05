@@ -1,6 +1,6 @@
 import React from 'react'
 
-class MessageField extends React.Component {
+class MessageForm extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -27,19 +27,23 @@ class MessageField extends React.Component {
   render() {
     return (
       <form
-        className="msg"
+        className="message-form"
         onSubmit={this.handleSubmit}
         disabled={this.props.disabled}>
         <input
+          className="message-field"
           onChange={this.handleChange}
           value={this.state.message}
           disabled={this.props.disabled}
           placeholder="Type a message..."
           type="text" />
-        <input type="submit" value="Send" />
+        <input
+          className="message-submit"
+          type="submit"
+          value="Send" />
       </form>
     );
   }
 }
 
-export default MessageField;
+export default MessageForm;

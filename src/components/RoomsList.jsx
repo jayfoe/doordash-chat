@@ -18,7 +18,7 @@ function RoomsList({ rooms, setCurrentRoom, currentRoom }) {
       {sortedRooms.map(room => {
         return (
           <div key={room.id}>
-            <button onClick={() => setCurrentRoom(room)}>{room.name}</button>
+            <a href="#" onClick={() => setCurrentRoom(room)}>{room.name}</a>
           </div>
         )
       })}

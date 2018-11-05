@@ -3,7 +3,7 @@ import axios from 'axios';
 import RoomsList from './components/RoomsList';
 import Messages from './components/Messages';
 import RoomInfo from './components/RoomInfo';
-import MessageField from './components/MessageField';
+import MessageForm from './components/MessageForm';
 import Login from './components/Login';
 
 class App extends React.Component {
@@ -14,7 +14,7 @@ class App extends React.Component {
       currentRoom: null,
       messages: [],
       roomInfo: null,
-      currentUser: null
+      currentUser: 'Jon'
     };
     this.getRooms = this.getRooms.bind(this);
     this.setCurrentRoom = this.setCurrentRoom.bind(this);
@@ -64,22 +64,22 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        {this.state.currentUser
-          ? <div>
-              <RoomsList
-                rooms={this.state.rooms}
-                setCurrentRoom={this.setCurrentRoom}
-                currentRoom={this.state.currentRoom} />
-              <RoomInfo
-                currentUser={this.state.currentUser}
-                roomInfo={this.state.roomInfo} />
-              <Messages
-                currentRoom={this.state.currentRoom}
-                messages={this.state.messages} />
-              <MessageField sendMessage={this.sendMessage} disabled={!this.state.currentRoom} />
-            </div>
-          : <Login setCurrentUser={this.setCurrentUser} />
-        }
+        <RoomsList
+          rooms={this.state.rooms}
+          setCurrentRoom={this.setCurrentRoom}
+          currentRoom={this.state.currentRoom} />
+        <div className="chat">
+          <RoomInfo
+            currentUser={this.state.currentUser}
+            roomInfo={this.state.roomInfo} />
+          <Messages
+            currentUser={this.state.currentUser}
+            currentRoom={this.state.currentRoom}
+            messages={this.state.messages} />
+          <MessageForm
+            sendMessage={this.sendMessage}
+            disabled={!this.state.currentRoom} />
+        </div>
       </div>
     );
   }

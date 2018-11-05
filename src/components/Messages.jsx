@@ -1,19 +1,19 @@
 import React from 'react'
 
-function Messages({ currentRoom, messages }) {
+function Messages({ currentUser, currentRoom, messages }) {
   return (
-    <div className="chat">
+    <div className="messages">
       {currentRoom
         ? <div>
             {messages.map((message, index) => {
               return (
                 <div key={message.id}>
-                  <div>{message.name}: {message.message}</div>
+                  {message.name}: {message.message}
                 </div>
               )
             })}
           </div>
-        : <div className="join-room">
+        : <div>
             Join a room!
           </div>
       }
