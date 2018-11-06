@@ -1,6 +1,6 @@
 import React from 'react'
 
-function RoomInfo({ currentUser, roomInfo }) {
+function RoomInfo({ roomInfo }) {
   return (
     <div className="room-info">
       {roomInfo

@@ -8,13 +8,13 @@ body {
   height: 100vh;
 }
 
-.rooms-list {
+.sidebar {
   width: 20%;
   background-color: rgb(255, 25, 36);
 }
 
-.rooms-list h2 {
-  padding-left: 20px;
+.sidebar h2 {
+  padding-left: 10px;
   height: 15%;
   margin-top: 20px;
   margin-bottom: 0;
@@ -23,7 +23,7 @@ body {
 
 .rooms-list div {
   font-size: 0.83em;
-  padding: 10px 20px;
+  padding: 10px;
 }
 
 .rooms-list a.active {
@@ -33,7 +33,7 @@ body {
 .rooms-list a {
   display: block;
   font-size: 0.83em;
-  padding: 10px 20px;
+  padding: 10px;
   text-decoration: none;
   color: rgb(240, 240, 240);
   font-weight: normal;
@@ -44,6 +44,9 @@ h2 {
   margin: 0;
   font-weight: normal;
   color: rgb(105, 105, 105);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 h5 {
@@ -91,6 +94,10 @@ h5 {
   flex: 1;
   background-color: rgb(240, 240, 240);
   color: rgb(105, 105, 105);
+}
+
+.join-room {
+  text-align: center;
 }
 
 .message {

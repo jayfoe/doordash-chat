@@ -19,7 +19,7 @@ function Messages({ currentUser, currentRoom, messages }) {
               )
             })}
           </div>
-        : <div>
+        : <div className="join-room">
             Join a room!
           </div>
       }

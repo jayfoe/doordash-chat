@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-function RoomsList({ currentUser, rooms, setCurrentRoom, currentRoom }) {
+function RoomsList({ rooms, setCurrentRoom, currentRoom }) {
   const sortedRooms = rooms.sort((a, b) => {
     const nameA = a.name.toUpperCase();
     const nameB = b.name.toUpperCase();
@@ -15,7 +15,6 @@ function RoomsList({ currentUser, rooms, setCurrentRoom, currentRoom }) {
 
   return (
     <div className="rooms-list">
-      <h2>{currentUser}</h2>
       {sortedRooms.map(room => {
         return (
           <a

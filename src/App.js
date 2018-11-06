@@ -5,6 +5,7 @@ import Messages from './components/Messages';
 import RoomInfo from './components/RoomInfo';
 import MessageForm from './components/MessageForm';
 import Login from './components/Login';
+import UserInfo from './components/UserInfo';
 
 class App extends React.Component {
   constructor() {
@@ -64,11 +65,14 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <RoomsList
-          currentUser={this.state.currentUser}
-          rooms={this.state.rooms}
-          setCurrentRoom={this.setCurrentRoom}
-          currentRoom={this.state.currentRoom} />
+        <div className="sidebar">
+          <UserInfo currentUser={this.state.currentUser} />
+          <RoomsList
+            currentUser={this.state.currentUser}
+            rooms={this.state.rooms}
+            setCurrentRoom={this.setCurrentRoom}
+            currentRoom={this.state.currentRoom} />
+        </div>
         <div className="chat">
           <RoomInfo
             currentUser={this.state.currentUser}
