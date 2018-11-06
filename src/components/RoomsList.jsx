@@ -15,17 +15,20 @@ function RoomsList({ rooms, setCurrentRoom, currentRoom }) {
 
   return (
     <div className="rooms-list">
-      {sortedRooms.map(room => {
-        return (
-          <a
-            className={currentRoom === room ? "active" : ""}
-            key={room.id}
-            href="#"
-            onClick={() => setCurrentRoom(room)}>
-              {room.name}
-          </a>
-        )
-      })}
+      <ul>
+        {sortedRooms.map(room => {
+          const active = currentRoom === room ? "active" : "";
+          return (
+            <li key={room.id} className={active}>
+              <a
+                href="#"
+                onClick={() => setCurrentRoom(room)}>
+                  {room.name}
+              </a>
+            </li>
+          )
+        })}
+      </ul>
     </div>
   )
 }

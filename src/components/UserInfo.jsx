@@ -19,7 +19,7 @@ class UserInfo extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="user-info">
         <h2>{this.props.currentUser}</h2>
         <h5>
           Online for {Math.floor((this.state.elapsed / 1000) / 60)} minutes
