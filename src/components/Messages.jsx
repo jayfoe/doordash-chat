@@ -5,10 +5,16 @@ function Messages({ currentUser, currentRoom, messages }) {
     <div className="messages">
       {currentRoom
         ? <div>
-            {messages.map((message, index) => {
+            {messages.map((message) => {
               return (
-                <div key={message.id}>
-                  {message.name}: {message.message}
+                <div
+                className={message.name === currentUser
+                  ? "my-message"
+                  : "other-message"
+                }
+                key={message.id}>
+                  <span className="message chat-message">{message.message}</span>
+                  <span className="message chat-name">{message.name}</span>
                 </div>
               )
             })}
@@ -21,4 +27,4 @@ function Messages({ currentUser, currentRoom, messages }) {
   )
 }
 
-export default Messages
+export default Messages;

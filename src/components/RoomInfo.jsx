@@ -4,11 +4,11 @@ function RoomInfo({ currentUser, roomInfo }) {
   return (
     <div className="room-info">
       {roomInfo
-        ? <div>
-            <div>{roomInfo.name}</div>
-            <div>{roomInfo.users.join(', ')}</div>
+        ? <div className="room">
+            <h2>{roomInfo.name}</h2>
+            <h5>{roomInfo.users.join(', ')}</h5>
           </div>
-        : <div>DoorDash Chat!</div>
+        : <h2 className="room">DoorDash Chat!</h2>
       }
     </div>
   )

@@ -65,6 +65,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <RoomsList
+          currentUser={this.state.currentUser}
           rooms={this.state.rooms}
           setCurrentRoom={this.setCurrentRoom}
           currentRoom={this.state.currentRoom} />

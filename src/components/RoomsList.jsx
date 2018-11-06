@@ -1,6 +1,6 @@
 import React from 'react'
 
-function RoomsList({ rooms, setCurrentRoom, currentRoom }) {
+function RoomsList({ currentUser, rooms, setCurrentRoom, currentRoom }) {
   const sortedRooms = rooms.sort((a, b) => {
     const nameA = a.name.toUpperCase();
     const nameB = b.name.toUpperCase();
@@ -15,11 +15,16 @@ function RoomsList({ rooms, setCurrentRoom, currentRoom }) {
 
   return (
     <div className="rooms-list">
+      <h2>{currentUser}</h2>
       {sortedRooms.map(room => {
         return (
-          <div key={room.id}>
-            <a href="#" onClick={() => setCurrentRoom(room)}>{room.name}</a>
-          </div>
+          <a
+            className={currentRoom === room ? "active" : ""}
+            key={room.id}
+            href="#"
+            onClick={() => setCurrentRoom(room)}>
+              {room.name}
+          </a>
         )
       })}
     </div>
