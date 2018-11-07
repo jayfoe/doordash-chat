@@ -18,15 +18,19 @@ body {
   vertical-align: middle;
 }
 
-.login-field {
+.login {
+  display: block;
+  margin: 10px auto;
   width: 35%;
-  padding: 15px 0;
+  padding: 15px 10px;
+}
+
+.login-field {
+  box-sizing: border-box;
   border: 1px solid var(--grey-border);
 }
 
 .login-button {
-  width: 35%;
-  padding: 15px 0;
   color: var(--white-text);
   border: 1px solid var(--doordash-red);
   background-color: var(--doordash-red);
@@ -193,7 +197,7 @@ h5 {
 
 .my-message {
   position: relative;
-  width:100%;
+  width: 100%;
   text-align: right;
 }
 

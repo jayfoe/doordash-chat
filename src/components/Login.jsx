@@ -27,14 +27,14 @@ class Login extends React.Component {
         onSubmit={this.handleSubmit}
         disabled={this.props.disabled}>
         <input
-          className="login-field"
+          className="login login-field"
           onChange={this.handleChange}
           value={this.state.name}
           disabled={this.props.disabled}
           placeholder="Type your username..."
           type="text" />
         <input
-          className="login-button"
+          className="login login-button"
           type="submit"
           value="Join the DoorDash Chat!" />
       </form>

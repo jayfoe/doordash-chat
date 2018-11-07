@@ -1,3 +1,8 @@
+# How To Run Project
+npm install
+npm run start
+http://localhost:3000
+
 # DoorDash Frontend Interview Project
 * TLDR: *Build a chat app with real APIs*
 * Time: *3hr - 6hrs*
