@@ -18,23 +18,24 @@ class MessageForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    this.props.sendMessage(this.state.message)
+    this.props.sendMessage(this.state.message);
     this.setState({
       message: ''
-    })
+    });
   }
 
   render() {
+    const { disabled } = this.props;
     return (
       <form
         className="message-form"
         onSubmit={this.handleSubmit}
-        disabled={this.props.disabled}>
+        disabled={disabled}>
         <input
           className="message-field"
           onChange={this.handleChange}
           value={this.state.message}
-          disabled={this.props.disabled}
+          disabled={disabled}
           placeholder="Type a message..."
           type="text" />
         <input

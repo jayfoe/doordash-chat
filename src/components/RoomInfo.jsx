@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function RoomInfo({ roomInfo }) {
   return (
@@ -11,7 +11,7 @@ function RoomInfo({ roomInfo }) {
         : <h2 className="room">DoorDash Chat!</h2>
       }
     </div>
-  )
+  );
 }
 
 export default RoomInfo;

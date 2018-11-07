@@ -41,7 +41,7 @@ class Messages extends React.Component {
           : ""
         }
       </div>
-    )
+    );
   }
 }
 
