@@ -1,24 +1,49 @@
 body {
   margin: 0;
   font-family: Helvetica;
+  --grey-border: rgb(218, 218, 218);
+  --doordash-red: rgb(252, 32, 70);
+  --white-text: #ffffff;
+}
+
+.container {
+  height: 100vh;
+  display: table;
+  width: 100%;
+}
+
+.login-form {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.login-field {
+  width: 35%;
+  padding: 15px 0;
+  border: 1px solid var(--grey-border);
+}
+
+.login-button {
+  width: 35%;
+  padding: 15px 0;
+  color: var(--white-text);
+  border: 1px solid var(--doordash-red);
+  background-color: var(--doordash-red);
 }
 
 .App {
   display: flex;
   height: 100vh;
-  --grey-border: rgb(218, 218, 218);
-  --red-background: rgb(252, 32, 70);
-  --white-text: #ffffff;
 }
 
 .user-info {
-  padding: 20px 0 0 10px;
+  padding: 20px 0 20px 10px;
 }
 
 .sidebar {
-  height: 100vh;
   width: 20%;
-  background-color: var(--red-background);
+  background-color: var(--doordash-red);
 }
 
 .sidebar h2 {
@@ -32,7 +57,8 @@ body {
 }
 
 .rooms-list {
-  overflow: scroll;
+  overflow: auto;
+  height: 85vh;
 }
 
 .rooms-list div {
@@ -40,7 +66,7 @@ body {
   padding: 10px;
 }
 
-.rooms-list > ul {
+.rooms-list ul {
   list-style-type: none;    
   padding: 0;
 }
@@ -97,14 +123,14 @@ h5 {
   border-top: 2px solid var(--grey-border);
 }
 
-.message-form > .message-field {
+.message-form .message-field {
   width: 100%;
   padding: 10px;
   margin: 15px;
   border: 1px solid var(--grey-border);
 }
 
-.message-form > .message-submit {
+.message-form .message-submit {
   padding-right: 15px;
   font-weight: bold;
 }
@@ -152,11 +178,11 @@ h5 {
   margin: 5px 0;
 }
 
-.other-message > .chat-message {
+.other-message .chat-message {
   background-color: var(--white-text);
 }
 
-.other-message > .chat-name {
+.other-message .chat-name {
   color: rgb(111, 111, 111);
 }
 
@@ -171,12 +197,12 @@ h5 {
   text-align: right;
 }
 
-.my-message > .chat-message {
+.my-message .chat-message {
   color: var(--white-text);
-  background-color: var(--red-background);
+  background-color: var(--doordash-red);
 }
 
-.my-message > .chat-name {
+.my-message .chat-name {
   text-align: right;
   color: rgb(111, 111, 111);
 }

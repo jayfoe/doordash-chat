@@ -15,7 +15,7 @@ class App extends React.Component {
       currentRoom: null,
       messages: [],
       roomInfo: null,
-      currentUser: 'Jon'
+      currentUser: null
     };
     this.getRooms = this.getRooms.bind(this);
     this.setCurrentRoom = this.setCurrentRoom.bind(this);
@@ -64,27 +64,32 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="sidebar">
-          <UserInfo currentUser={this.state.currentUser} />
-          <RoomsList
-            currentUser={this.state.currentUser}
-            rooms={this.state.rooms}
-            setCurrentRoom={this.setCurrentRoom}
-            currentRoom={this.state.currentRoom} />
-        </div>
-        <div className="chat">
-          <RoomInfo
-            currentUser={this.state.currentUser}
-            roomInfo={this.state.roomInfo} />
-          <Messages
-            currentUser={this.state.currentUser}
-            currentRoom={this.state.currentRoom}
-            messages={this.state.messages} />
-          <MessageForm
-            sendMessage={this.sendMessage}
-            disabled={!this.state.currentRoom} />
-        </div>
+      <div className="container"> 
+        {this.state.currentUser
+          ? <div className="App">
+              <div className="sidebar">
+                <UserInfo currentUser={this.state.currentUser} />
+                <RoomsList
+                  currentUser={this.state.currentUser}
+                  rooms={this.state.rooms}
+                  setCurrentRoom={this.setCurrentRoom}
+                  currentRoom={this.state.currentRoom} />
+              </div>
+              <div className="chat">
+                <RoomInfo
+                  currentUser={this.state.currentUser}
+                  roomInfo={this.state.roomInfo} />
+                <Messages
+                  currentUser={this.state.currentUser}
+                  currentRoom={this.state.currentRoom}
+                  messages={this.state.messages} />
+                <MessageForm
+                  sendMessage={this.sendMessage}
+                  disabled={!this.state.currentRoom} />
+              </div>
+            </div>
+          : <Login setCurrentUser={this.setCurrentUser} />
+        }
       </div>
     );
   }
