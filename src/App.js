@@ -17,12 +17,6 @@ class App extends React.Component {
       roomInfo: null,
       currentUser: null
     };
-    this.getRooms = this.getRooms.bind(this);
-    this.setCurrentRoom = this.setCurrentRoom.bind(this);
-    this.getMessages = this.getMessages.bind(this);
-    this.sendMessage = this.sendMessage.bind(this);
-    this.getRoomInfo = this.getRoomInfo.bind(this);
-    this.setCurrentUser = this.setCurrentUser.bind(this);
   }
 
   componentDidMount() {
@@ -35,7 +29,7 @@ class App extends React.Component {
       .catch(err => console.log("Error getting rooms: ", err));
   }
 
-  setCurrentRoom(currentRoom) {
+  setCurrentRoom = (currentRoom) => {
     this.setState({ currentRoom });
     this.getMessages(currentRoom.id);
     this.getRoomInfo(currentRoom.id);
@@ -46,11 +40,11 @@ class App extends React.Component {
       .then(res => this.setState({ messages: res.data }));
   }
 
-  sendMessage(message){
+  sendMessage = (message) => {
     axios.post(`/api/rooms/${this.state.currentRoom.id}/messages`, {
       name: this.state.currentUser,
       message
-    }).then(res => this.getMessages(this.state.currentRoom.id));
+    }).then(() => this.getMessages(this.state.currentRoom.id));
   }
 
   getRoomInfo(roomId) {
@@ -58,7 +52,7 @@ class App extends React.Component {
       .then(res => this.setState({ roomInfo: res.data }));
   }
 
-  setCurrentUser(currentUser) {
+  setCurrentUser = (currentUser) => {
     this.setState({ currentUser });
   }
 

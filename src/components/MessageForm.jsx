@@ -6,17 +6,15 @@ class MessageForm extends React.Component {
     this.state = {
       message: ''
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({
       message: e.target.value
     });
   }
 
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault()
     this.props.sendMessage(this.state.message);
     this.setState({
