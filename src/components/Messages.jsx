@@ -22,8 +22,8 @@ class Messages extends React.Component {
     } = this.props;
     return (
       <div className="messages">
-        {currentRoom
-          ? <div>
+        {currentRoom &&
+          <div>
               {messages.map((message) => {
                 return (
                   <div
@@ -37,8 +37,7 @@ class Messages extends React.Component {
                   </div>
                 )
               })}
-            </div>
-          : ""
+          </div>
         }
       </div>
     );

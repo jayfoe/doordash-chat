@@ -15,25 +15,23 @@ class Login extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.setCurrentUser(this.state.name);
-    this.setState({ name: '' });
   }
 
   render() {
     return (
       <form
         className="login-form"
-        onSubmit={this.handleSubmit}
-        disabled={this.props.disabled}>
+        onSubmit={this.handleSubmit}>
         <input
           className="login login-field"
           onChange={this.handleChange}
           value={this.state.name}
-          disabled={this.props.disabled}
           placeholder="Type your username..."
           type="text" />
         <input
           className="login login-button"
           type="submit"
+          disabled={!this.state.name}
           value="Join the DoorDash Chat!" />
       </form>
     );

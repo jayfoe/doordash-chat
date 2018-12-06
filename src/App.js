@@ -23,7 +23,7 @@ class App extends React.Component {
     this.getRooms();
   }
   
-  getRooms() {
+  getRooms = () => {
     axios.get('/api/rooms')
       .then(res => this.setState({ rooms: res.data }))
       .catch(err => console.log("Error getting rooms: ", err));
@@ -35,7 +35,7 @@ class App extends React.Component {
     this.getRoomInfo(currentRoom.id);
   }
 
-  getMessages(roomId) {
+  getMessages = (roomId) => {
     axios.get(`/api/rooms/${roomId}/messages`)
       .then(res => this.setState({ messages: res.data }));
   }
@@ -47,7 +47,7 @@ class App extends React.Component {
     }).then(() => this.getMessages(this.state.currentRoom.id));
   }
 
-  getRoomInfo(roomId) {
+  getRoomInfo = (roomId) => {
     axios.get(`/api/rooms/${roomId}`)
       .then(res => this.setState({ roomInfo: res.data }));
   }
