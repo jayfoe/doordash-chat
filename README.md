@@ -59,17 +59,6 @@ We're going to review your code to see how you work and how you make tradeoffsâ€
 1. Write up instructions on how to run your project and ensure there's ample documentation on your intent
 2. Upload your repo as a **private** repository to GitHub or GitLab
 3. Ensure that we're added as collaborators to the repo, and have access to read/download your project:
-  * [`ryngonzalez`](https://github.com/ryngonzalez) (GitHub/GitLab)
-  * [`badsauce`](https://github.com/badsauce) (GitHub/Gitlab)
-  * [`marknach`](https://github.com/marknach) (GitHub/GitLab)
-  * [`dpenny`](https://github.com/dpenny) (GitHub), [`dpenny1`](https://gitlab.com/dpenny1) (Gitlab)
-  * [`ifsred`](https://github.com/ifsred) (GitHub/GitLab)
-  * [`chrsjxn`](https://github.com/chrsjxn) (GitHub/GitLab)
-  * [`JRMaitre`](https://github.com/JRMaitre) (GitHub/GitLab)
-  * [`ThanmayaRaghuram`](https://github.com/ThanmayaRaghuram) (GitHub/GitLab)
-  * [`jslau`](https://github.com/jslau) (GitHub/GitLab)
-  * [`FakeJake2019`](https://github.com/FakeJake2019) (GitHub/GitLab)
-
 4. Send an email back to recruiting to ensure that we have a link/access to the repo.
 5. We'll review and get back to you soon!
 
