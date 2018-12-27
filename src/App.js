@@ -15,7 +15,7 @@ class App extends React.Component {
       currentRoom: null,
       messages: [],
       roomInfo: null,
-      currentUser: null
+      currentUser: 'Jonathan'
     };
   }
 

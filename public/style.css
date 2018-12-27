@@ -147,6 +147,11 @@ h5 {
   color: rgb(105, 105, 105);
 }
 
+.messages .reaction {
+  width: 30px;
+  vertical-align: middle;
+}
+
 .join-room {
   text-align: center;
 }

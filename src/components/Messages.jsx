@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Message from './Message';
 
 class Messages extends React.Component {
   componentWillUpdate() {
@@ -26,15 +27,10 @@ class Messages extends React.Component {
           <div>
               {messages.map((message) => {
                 return (
-                  <div
-                  className={message.name === currentUser
-                    ? "my-message"
-                    : "other-message"
-                  }
-                  key={message.id}>
-                    <span className="message chat-message">{message.message}</span>
-                    <span className="message chat-name">{message.name}</span>
-                  </div>
+                  <Message
+                    currentRoom={currentRoom}
+                    message={message}
+                    currentUser={currentUser} />
                 )
               })}
           </div>
